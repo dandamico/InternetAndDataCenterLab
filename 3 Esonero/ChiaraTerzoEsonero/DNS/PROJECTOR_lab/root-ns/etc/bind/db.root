@@ -1,0 +1,7 @@
+.        IN SOA root-ns. root.root-ns. 1 2 3 4 5
+
+.           IN NS root-ns.
+root-ns.    IN  A 15.0.0.10
+
+srv.        IN NS srv-ns.srv.
+srv-ns.srv. IN  A 15.0.0.11

@@ -1,0 +1,9 @@
+a.) Which is the router-id of router r21?
+120.20.3.2
+
+b.) Which is the designated router of LAN G?
+Router b03 (router's address: 100.0.3.2)
+
+c.) How many 0/0 (default route) entries can be found
+in the zebra routing table of router r21?
+Two

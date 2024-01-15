@@ -1,0 +1,12 @@
+$TTL   60000
+@               IN      SOA     net.net.    root.net.net. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                       IN      NS      net.net.
+net.net.             IN      A       200.0.0.3
+
+cdn.net.    IN      A       200.0.0.4

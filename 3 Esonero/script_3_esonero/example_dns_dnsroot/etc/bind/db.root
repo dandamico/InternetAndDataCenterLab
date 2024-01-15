@@ -1,0 +1,17 @@
+$TTL   60000
+@               IN      SOA     ROOT-SERVER.    root.ROOT-SERVER. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@               IN      NS      ROOT-SERVER.
+ROOT-SERVER.	IN	A	200.0.0.2
+
+com.		    IN 	NS	ns1.com.
+ns1.com.	    IN 	A	100.0.0.3
+
+net.		    IN	NS	ns3.net.
+ns3.net.	    IN	A	200.0.0.3

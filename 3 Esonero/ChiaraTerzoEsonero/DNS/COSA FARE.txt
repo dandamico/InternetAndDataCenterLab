@@ -1,0 +1,12 @@
+1) Il client e il server hanno nel lab.conf
+client[image]="kathara/base"
+
+2) nel file .startup non metto la riga stystemctj frr:
+	- al client non metto niente
+	- al server metto l'avvio di apache2
+
+3) devo mettere a entrambi le rotte di default perchè non sanno dove mandare poi le cose, quindi
+a entrambi metto nello startup il comando statico:
+ip route add default via IndirizzoIpRouterCollegato
+
+4) mandi il comando dal client: links http://ipServer

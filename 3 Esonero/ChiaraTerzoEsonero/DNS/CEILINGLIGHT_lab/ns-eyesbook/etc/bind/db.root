@@ -1,0 +1,2 @@
+.                 IN NS root-name-server.
+root-name-server. IN  A 1.2.0.2

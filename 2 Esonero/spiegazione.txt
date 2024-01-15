@@ -1,0 +1,36 @@
+Se si dice che il router di un Autonomous System (AS) con numero 100 (AS100) è un "customer" 
+di un altro Autonomous System con numero 10 (AS10), significa che AS100 ha una relazione di 
+tipo cliente-fornitore con AS10 nel contesto del Border Gateway Protocol (BGP) o di un protocollo 
+di routing simile.
+
+Ecco cosa significa in termini generali:
+
+AS10 (Provider):
+AS10 è considerato il fornitore nella relazione.
+Fornisce servizi di connettività, trasferimento di dati e accesso a rotte di rete a AS100.
+Il router di AS10 annuncia le rotte al router di AS100.
+
+
+AS100 (Cliente):
+AS100 è considerato il cliente nella relazione.
+Paga AS10 per l'accesso alla connettività di rete più ampia offerta da AS10 e per il trasferimento di dati.
+Il router di AS100 riceve le rotte dal router di AS10, consentendo al traffico di raggiungere destinazioni 
+al di fuori di AS100.
+Quindi, se il router di AS100 è un "customer" di AS10, ciò indica che AS100 dipende da AS10 
+per la connettività di rete e per l'accesso a rotte esterne. Questo tipo di relazione è comune in Internet, 
+dove i provider offrono servizi a clienti più piccoli o a reti che dipendono da loro per l'accesso a una 
+connettività più ampia.
+
+-------------------CONCLUSIONI------------------
+Vuol dire che che possiamo dare un imporatanza maggiore a As10 ed è lai a dare informazioni è come 
+nel esempio del professore dove i router presenti alla rete 0.0.0.0 devonono comunicare agli altri che
+loro sono i default-origin
+
+Stessa cosa succedere con r1 nei confronti di r1
+
+---------------------------
+quindi si puo comunicare da entrambi r1->r10->r100 perche r1 è il provider di r10 e quindi a sua volta anche
+di r100 , possiamo anche fare r100->r10->r1 perche sempre dello stesso "blocco"
+
+la cosa che non possiamo fare è comunicare con r20 e passare per r10 ma dobbiamo passare da sopra
+mentre con

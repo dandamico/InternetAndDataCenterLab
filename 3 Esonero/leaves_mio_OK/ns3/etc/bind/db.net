@@ -1,0 +1,12 @@
+$TTL   60000
+@               IN      SOA     ns3.net.    root.ns3.net. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                       IN      NS      ns3.net.
+ns3.net.               IN      A       200.0.0.3
+
+cdn.net.     IN      A       200.0.0.4

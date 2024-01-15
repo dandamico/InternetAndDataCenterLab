@@ -1,0 +1,3 @@
+.        IN NS ns-root.
+ns-root. IN  A 20.0.0.2
+

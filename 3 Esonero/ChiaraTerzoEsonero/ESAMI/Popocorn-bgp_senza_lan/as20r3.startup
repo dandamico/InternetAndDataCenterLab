@@ -1,0 +1,4 @@
+ifconfig eth0 20.0.0.3 netmask 255.255.0.0 up
+ifconfig eth1 23.3.0.1 netmask 255.255.0.0 up
+/etc/init.d/zebra start
+

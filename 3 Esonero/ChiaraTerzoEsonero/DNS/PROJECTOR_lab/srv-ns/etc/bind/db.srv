@@ -1,0 +1,6 @@
+srv.        IN SOA srv-ns.srv. root.srv-ns.srv. 1 2 3 4 5
+
+srv.        IN NS srv-ns.srv.
+srv-ns.srv. IN  A 15.0.0.11
+
+web.srv.     IN  A 20.0.0.2

@@ -1,0 +1,8 @@
+ifconfig eth0 3.4.0.2 netmask 255.255.255.252 up
+ifconfig eth1 4.2.0.1 netmask 255.255.255.252 up
+ifconfig eth2 4.1.0.1 netmask 255.255.255.252 up
+ifconfig eth3 4.0.0.1 netmask 255.255.255.0 up
+ifconfig eth4 10.4.0.2 netmask 255.255.255.252 up
+
+/etc/init.d/quagga start
+

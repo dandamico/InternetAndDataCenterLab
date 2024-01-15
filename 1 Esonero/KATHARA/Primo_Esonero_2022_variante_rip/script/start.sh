@@ -1,0 +1,75 @@
+#!/bin/sh
+chmod u+x start.sh
+
+mkdir damicodaniele
+
+echo "Che esercizio è?\n 1)OSPF\n 2)DNS\n 3)RIP "
+read type
+
+# shellcheck disable=SC1073
+if [ $type -eq 1 ]  #OSPF
+then
+  echo "OSPF?(Digitare il numero della opzione desiderata)\n 1)MultiArea\n 2)SingleArea"
+  read ospftype
+
+  if [ $ospftype -eq 1 ]  #OSPF-multiarea
+  then
+    echo "Quante aree?(Numero esatto di aree)"
+    read totalArea
+    chmod u+x ./ospfmultiarea.sh
+    k=0
+    # shellcheck disable=SC2039
+    while [ $k -lt $totalArea ] ; do
+      echo "Radice Alfabetica dei router nell'area $k? (es. r bb aa ab)"
+      read alfaRouterBackBone
+
+      echo "La parte numerica dei ruoter di quest'area partono da 0 o 1?"
+      read startOfRouterBackBone
+
+      echo "Quanti Router nell'area $k? (verrà fatto il minore uguale)"
+      read numberOfRouter
+
+      /bin/bash ./ospfmultiarea.sh $startOfRouterBackBone $numberOfRouter $alfaRouterBackBone $k
+      k=$((k + 1))
+    done
+  fi
+
+
+  if [ $ospftype -eq 2 ]
+  then
+    echo "Radice Alfabetica dei router nell'area? (es. r bb aa ab)"
+    # shellcheck disable=SC2162
+    read alfaRouterBackBone
+
+    echo "La parte numerica dei ruoter di quest'area partono da 0 o 1?"
+    read startOfRouterBackBone
+
+    echo "Quanti Router ci sono nell'area? (verrà fatto il minore uguale)"
+    read numberOfRouter
+
+    #chmod u+x ./ospfsinglearea.sh
+    # shellcheck disable=SC2086
+    /bin/bash ./ospfsinglearea.sh "$startOfRouterBackBone" "$numberOfRouter" $alfaRouterBackBone
+  fi
+
+elif [ $type -eq 2 ]
+then
+  chmod u+x ./dns.sh
+  /bin/bash ./dns.sh
+
+elif [ $type -eq 3 ]
+then
+  echo "Radice Alfabetica dei router nell'area? (es. r bb aa ab)"
+    read alfaRouterBackBone
+
+    echo "La parte numerica dei ruoter di quest'area partono da 0 o 1?"
+    read startOfRouterBackBone
+
+    echo "Quanti Router ci sono? (verrà fatto il minore uguale)"
+    read numberOfRouter
+
+    #chmod u+x ./rip.sh
+    /bin/bash ./rip.sh $startOfRouterBackBone $numberOfRouter $alfaRouterBackBone
+fi  #fine
+
+echo "Speramo bene porcodi0"

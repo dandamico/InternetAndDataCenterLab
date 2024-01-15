@@ -1,0 +1,12 @@
+$TTL   60000
+@               IN      SOA     it.it.    root.it.it. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                       IN      NS      it.it.
+it.it.               IN      A       100.0.0.3
+
+site.it.     IN      A       100.0.0.2

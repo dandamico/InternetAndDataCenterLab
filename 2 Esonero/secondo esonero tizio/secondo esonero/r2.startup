@@ -1,0 +1,6 @@
+ifconfig eth0 50.1.2.2/24 up
+ifconfig eth1 100.2.0.2/16 up
+ifconfig eth2 50.2.88.2/24 up
+ifconfig eth3 50.2.20.2/24 up
+/etc/init.d/frr start
+
